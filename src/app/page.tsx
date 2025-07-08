@@ -264,7 +264,7 @@ const Home = () => {
                 {question}
               </AccordionTrigger>
               <AccordionContent className="text-gray-700">
-                {answer}
+                {answer.replace("'", "&apos;")}
               </AccordionContent>
             </AccordionItem>
           ))}
