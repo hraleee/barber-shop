@@ -9,107 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const features = [
-  {
-    title: "Profilo Dinamico",
-    description:
-      "Presenta il tuo talento con portfolio, certificazioni e feedback reali.",
-    icon: (
-      <svg
-        className="w-10 h-10 text-blue-600"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Match Intelligente",
-    description:
-      "Algoritmi avanzati per trovare le offerte di lavoro o i talenti più adatti.",
-    icon: (
-      <svg
-        className="w-10 h-10 text-blue-600"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" />
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
-  {
-    title: "Networking Potenziato",
-    description:
-      "Costruisci connessioni strategiche con aziende e professionisti top.",
-    icon: (
-      <svg
-        className="w-10 h-10 text-blue-600"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z"
-        />
-      </svg>
-    ),
-  },
-];
-
-const pricingPlans = [
-  {
-    title: "Basic",
-    price: "Free",
-    features: [
-      "Profilo professionale base",
-      "Accesso alle offerte di lavoro",
-      "Connessioni limitate",
-    ],
-    highlight: false,
-  },
-  {
-    title: "Pro",
-    price: "€29 / mese",
-    features: [
-      "Profilo professionale completo",
-      "Match intelligente avanzato",
-      "Connessioni illimitate",
-      "Supporto prioritario",
-    ],
-    highlight: true,
-  },
-  {
-    title: "Aziende",
-    price: "Contattaci",
-    features: [
-      "Ricerca talenti illimitata",
-      "Gestione team e offerte",
-      "Integrazioni personalizzate",
-      "Account manager dedicato",
-    ],
-    highlight: false,
-  },
-];
+import Image from "next/image";
 
 const faqs = [
   {
@@ -149,7 +49,7 @@ const Home = () => {
             BARBER SHOP
           </h1>
           <p className="text-lg md:text-xl opacity-90 text-white">
-            Tradizione, stile e cura per la tua barba e i tuoi capelli. Vivi l'esperienza autentica del barbiere di fiducia, dove ogni dettaglio conta.
+            Tradizione, stile e cura per la tua barba e i tuoi capelli. Vivi l&apos;esperienza autentica del barbiere di fiducia, dove ogni dettaglio conta.
           </p>
           <Button
             asChild
@@ -166,12 +66,13 @@ const Home = () => {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="relative w-full max-w-md md:max-w-lg rounded-xl overflow-hidden shadow-lg border-4 border-white"
         >
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
             alt="Barber Shop"
             width={800}
             height={600}
             className="object-cover"
+            priority
           />
         </motion.div>
       </motion.section>

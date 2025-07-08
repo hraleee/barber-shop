@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -50,7 +51,7 @@ export default function Login() {
         className="flex flex-col gap-5 w-full max-w-md bg-white/70 backdrop-blur-md p-10 rounded-3xl shadow-2xl border-2 border-blue-900 items-center"
       >
         {/* Logo Barber Shop */}
-        <a href="/" aria-label="Torna alla home" className="mb-2 block group">
+        <Link href="/" aria-label="Torna alla home" className="mb-2 block group">
           <svg
             className="w-24 h-24 drop-shadow-2xl group-hover:scale-110 group-hover:drop-shadow-[0_0_24px_rgba(185,28,28,0.5)] transition-transform"
             viewBox="0 0 64 64"
@@ -68,7 +69,7 @@ export default function Login() {
               </pattern>
             </defs>
           </svg>
-        </a>
+        </Link>
         <h2 className="text-3xl font-extrabold mb-2 text-center text-red-700 tracking-tight">Login</h2>
         <Input
           type="email"
@@ -89,7 +90,7 @@ export default function Login() {
             autoComplete="current-password"
             className="focus:ring-2 focus:ring-red-700 border-red-700 text-lg py-3 px-4 rounded-xl bg-white/80 shadow-sm"
           />
-          <a href="#" className="text-sm text-blue-900 hover:underline self-end font-medium transition-colors">Password dimenticata?</a>
+          <Link href="/forgot-password" className="text-sm text-blue-900 hover:underline self-end font-medium transition-colors">Password dimenticata?</Link>
         </div>
         <button
           type="submit"
@@ -102,7 +103,7 @@ export default function Login() {
         {success && <div className="text-green-600 text-sm mt-2">{success}</div>}
         <div className="mt-2 text-center w-full">
           <span className="text-gray-700">Non hai un account? </span>
-          <a href="#" className="text-red-700 hover:underline font-semibold transition-colors">Registrati</a>
+          <Link href="/register" className="text-red-700 hover:underline font-semibold transition-colors">Registrati</Link>
         </div>
       </form>
     </div>
